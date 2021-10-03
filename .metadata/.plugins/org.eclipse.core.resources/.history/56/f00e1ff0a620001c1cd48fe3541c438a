@@ -1,0 +1,51 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entites.Estudante;
+
+
+public class Program {
+
+	public static void main(String[] args) {
+	
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		Estudante[] estudant = new Estudante[10];
+		
+		System.out.println("digite a quantidade de estudantes: ");
+		double numeroEstudante = sc.nextDouble();
+		
+		for(int i = 0; i <= numeroEstudante;i++) {
+			
+				System.out.print("Nome: ");
+				System.out.println();
+				String nome = sc.nextLine();
+				System.out.print("Email: ");
+				System.out.println();
+				String email = sc.nextLine();
+				System.out.print("posiçao: ");
+				int posicao = sc.nextInt();
+				System.out.println();
+				estudant[posicao] = new Estudante(nome, email);
+				
+			
+		}
+		System.out.println();
+		for(int i=0;i<10;i++) {
+			if(estudant[i]!=null) {
+				System.out.println(i+ ", " +estudant[i]);
+			}
+			
+		}
+		
+		
+		
+		
+		sc.close();
+		
+	}
+
+}

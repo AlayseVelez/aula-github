@@ -1,0 +1,67 @@
+package Principal;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+
+import Entidades.Funcionario;
+
+public class lista {
+
+	public static void main(String[] args) {
+		
+		List<Funcionario> list = new ArrayList<>();
+		Scanner sc = new Scanner(System.in);
+		Funcionario fun;
+		
+		System.out.println("Digiti quantos funcionarios deseja cadastrar: ");
+		int quantidade = sc.nextInt();
+		
+		for(int i=0; i<quantidade; i++) {
+			System.out.println("Cadastro #" + i + ":");
+			System.out.println("Id: ");
+			list.add(id);
+			int id = sc.nextInt();
+			System.out.println("Nome: ");
+			String nome = sc.nextLine();
+			System.out.println("Salario: ");
+			double salario = sc.nextDouble();
+			fun = new Funcionario(nome,salario,id);
+			
+		}
+		System.out.println("Digite o id do funcionario que irá receber a porcetagem: ");
+		int ide = sc.nextInt();
+		for() {
+			
+		}
+		list.add("Amanda");
+		list.add("Lucas");
+		list.add("Paulo");
+        list.add("Luis");
+        list.add("Alayse");
+        System.out.println(list.size());
+        
+        for(String s: list) {
+        	System.out.println(s);
+        }
+        System.out.println("---------------");
+        //list.remove(0);//remova na posição 0
+        list.removeIf(s -> s.charAt(0) == 'P');
+        for(String s: list) {
+        	System.out.println(s);
+        }
+        System.out.println("----------------");
+        System.out.println("index of Luis " +list.indexOf("Luis"));
+        System.out.println("-------------------");
+        
+        List<String> resultado = list.stream().filter(s -> s.charAt(0) == 'A').collect(Collectors.toList());
+        for(String s: resultado) {
+        	 System.out.println(s);
+        }
+        System.out.println("-------------------");
+        String nome = list.stream().filter(s -> s.charAt(0) == 'D').findFirst().orElse(null);
+        System.out.println(nome);
+	}
+
+}

@@ -1,0 +1,33 @@
+package Principal;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class lista {
+
+	public static void main(String[] args) {
+		
+		List<String> list = new ArrayList<>();
+		
+		list.add("Amanda");
+		list.add("Lucas");
+		list.add("Paulo");
+        list.add("Luis");
+        list.add("Alayse");
+        System.out.println(list.size());
+        
+        for(String s: list) {
+        	System.out.println(s);
+        }
+        System.out.println("---------------");
+        //list.remove(0);//remova na posição 0
+        list.removeIf(s -> s.charAt(0) == 'A');
+        for(String s: list) {
+        	System.out.println(s);
+        }
+        System.out.println("----------------");
+        System.out.println("index of Luis " +list.indexOf("Luis"));
+        
+	}
+
+}

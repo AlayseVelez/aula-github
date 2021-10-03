@@ -1,0 +1,9 @@
+package entites;
+
+public class Account {
+	
+	public int numero;
+	public String nome;
+	public double saldo;
+
+}

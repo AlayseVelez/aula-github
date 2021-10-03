@@ -1,0 +1,52 @@
+package Principal;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+
+import Entidades.Funcionario;
+
+public class lista {
+
+	public static void main(String[] args) {
+		
+		List<Funcionario> list = new ArrayList<>();
+		Scanner sc = new Scanner(System.in);
+		Funcionario fun;
+		
+		System.out.println("Digiti quantos funcionarios deseja cadastrar: ");
+		int quantidade = sc.nextInt();
+		
+		for(int i=1; i<=quantidade; i++) {
+			System.out.println("Cadastro #" + i + ":");
+			System.out.println("Id: ");
+			
+			int id = sc.nextInt();
+			System.out.println("Nome: ");
+			String nome = sc.nextLine();
+			sc.nextLine();
+			System.out.println("Salario: ");
+			double salario = sc.nextDouble();
+			fun = new Funcionario(nome,salario,id);
+			list.add(fun);
+			System.out.println(fun);
+			
+		}
+		System.out.println("Digite o id do funcionario que irá receber a porcetagem: ");
+		int ide = sc.nextInt();
+		System.out.println("Digiti a porcentagem: ");
+		//double por = sc.nextDouble();
+		
+		for(Funcionario f: list) {
+			list.indexOf(ide);
+			//Double result = salario * por;
+			System.out.println();
+		}
+		
+        
+        
+      
+	}
+
+}

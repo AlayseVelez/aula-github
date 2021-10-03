@@ -1,0 +1,42 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entites.Account;
+import util.CurrencyConverter;
+
+
+public class Program {
+
+	public static void main(String[] args) {
+	
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		Account acc;
+		
+		System.out.println("enter account number: ");
+		int numero = sc.nextInt();
+		System.out.println("enter account holder: ");
+		String nome = sc.nextLine();
+		System.out.println("Is there na initial deposity (y/n)? ");
+		char resposta = sc.next().charAt(0);
+		
+		if(resposta == 'y') {
+			System.out.println("enter value initial deposity: ");
+			double deposito = sc.nextDouble(); 
+		     acc = new Account(numero,nome,deposito);
+			
+		}else {
+			acc = new Account(numero,nome);
+		}
+		
+		System.out.println("account data:");
+		System.out.print(acc);
+		
+		
+		sc.close();
+		
+	}
+
+}
